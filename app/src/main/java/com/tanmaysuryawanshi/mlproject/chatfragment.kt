@@ -28,6 +28,7 @@ class chatfragment : Fragment() {
     private lateinit var editText: EditText
     lateinit var question:String
     val api_key=""
+
     lateinit var generateButton: Button
     val JSON: MediaType = "application/json; charset=utf-8".toMediaType()
     lateinit var loader:LottieAnimationView
