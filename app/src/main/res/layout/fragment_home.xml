@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+
+    android:layout_height="match_parent">
+
+
+
+    <TextView
+        android:id="@+id/appName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintVertical_bias="0"
+        android:layout_marginTop="30dp"
+        android:textSize="36sp"
+        android:fontFamily="@font/open_sans"
+        android:textStyle="bold"
+        android:textColor="@color/blackapp"
+        android:text="Health Mate"
+        android:layout_marginStart="25dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/appDesc"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintVertical_bias="0"
+        android:layout_marginTop="5dp"
+        android:textSize="18sp"
+        android:fontFamily="@font/open_sans"
+
+        android:textColor="@color/blackapplight"
+        android:text="Complete Heart Guide"
+        android:layout_marginStart="25dp"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appName"/>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/checkupCard"
+      app:cardCornerRadius="18dp"
+        app:cardElevation="15dp"
+        app:cardBackgroundColor="@color/blackapp"
+        android:layout_marginTop="40dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginEnd="25dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/appDesc"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        >
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_margin="18dp"
+                android:src="@drawable/checkupimage"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/checkupTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="CheckUp"
+                android:layout_marginStart="18dp"
+                android:fontFamily="@font/open_sans_semibold"
+                android:textColor="@color/white"
+                android:textSize="28sp"
+                app:layout_constraintStart_toEndOf="@+id/imageView"
+                app:layout_constraintTop_toTopOf="@+id/imageView" />
+            <TextView
+                android:id="@+id/checkupDescTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Know if you have any heart disease"
+android:layout_marginTop="9dp"
+                android:fontFamily="@font/open_sans"
+                android:textColor="@color/whitelight"
+                android:textSize="10sp"
+                app:layout_constraintStart_toStartOf="@+id/checkupTv"
+                app:layout_constraintTop_toBottomOf="@+id/checkupTv" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/tipsCard"
+        app:cardCornerRadius="18dp"
+        app:cardElevation="15dp"
+        app:cardBackgroundColor="@color/blackapp"
+        android:layout_marginTop="40dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginEnd="25dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/checkupCard"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        >
+        <androidx.constraintlayout.widget.ConstraintLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/imageViewTips"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_margin="18dp"
+                android:src="@drawable/tipsimg"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tipsTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tips"
+                android:layout_marginStart="18dp"
+                android:fontFamily="@font/open_sans_semibold"
+                android:textColor="@color/white"
+                android:textSize="28sp"
+                app:layout_constraintStart_toEndOf="@+id/imageViewTips"
+                app:layout_constraintTop_toTopOf="@+id/imageViewTips" />
+            <TextView
+                android:id="@+id/tipsDescTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="For a healthy heart"
+                android:layout_marginTop="9dp"
+                android:fontFamily="@font/open_sans"
+                android:textColor="@color/whitelight"
+                android:textSize="10sp"
+                app:layout_constraintStart_toStartOf="@+id/tipsTv"
+                app:layout_constraintTop_toBottomOf="@+id/tipsTv" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView
+        android:id="@+id/reportCard"
+        app:cardCornerRadius="18dp"
+        app:cardElevation="15dp"
+        app:cardBackgroundColor="@color/blackapp"
+        android:layout_marginTop="40dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginEnd="25dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/tipsCard"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        >
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/imageViewReport"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_margin="18dp"
+                android:src="@drawable/reportsimg"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/reportTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Reports"
+                android:layout_marginStart="18dp"
+                android:fontFamily="@font/open_sans_semibold"
+                android:textColor="@color/white"
+                android:textSize="28sp"
+                app:layout_constraintStart_toEndOf="@+id/imageViewReport"
+                app:layout_constraintTop_toTopOf="@+id/imageViewReport" />
+            <TextView
+                android:id="@+id/reportDescTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Saved reports"
+                android:layout_marginTop="9dp"
+                android:fontFamily="@font/open_sans"
+                android:textColor="@color/whitelight"
+                android:textSize="10sp"
+                app:layout_constraintStart_toStartOf="@+id/reportTv"
+                app:layout_constraintTop_toBottomOf="@+id/reportTv" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

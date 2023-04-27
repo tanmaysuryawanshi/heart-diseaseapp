@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="25dp"
+        android:fontFamily="@font/open_sans"
+        android:text="Add Patient Details"
+        android:textColor="@color/blackapp"
+        android:textSize="18dp"
+        app:layout_constraintStart_toEndOf="@+id/backOption"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/backOption"
+
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+android:layout_marginStart="20dp"
+        android:src="@drawable/ic_round_arrow_back"
+        android:layout_marginTop="25dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <ImageView
+        android:id="@+id/inputOption"
+android:layout_marginEnd="25dp"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="20dp"
+        android:src="@drawable/ic_baseline_input_24"
+        android:layout_marginTop="25dp"
+      app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/enterEmailLogin"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Email"
+android:visibility="gone"
+        android:layout_marginTop="13dp"
+
+        app:layout_constraintEnd_toEndOf="parent"
+android:layout_margin="25dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/backOption"
+        android:inputType="textEmailSubject"
+        app:boxCornerRadiusBottomEnd="18dp"
+        app:boxCornerRadiusBottomStart="18dp"
+        app:boxCornerRadiusTopEnd="18dp"
+        app:boxCornerRadiusTopStart="18dp"
+
+        >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/enterEmailLoginET"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:inputType="textEmailAddress"
+            android:textColor="@color/black" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_margin="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/enterEmailLogin"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/age"
+            android:layout_marginBottom="10dp"
+            android:textSize="16sp"
+            android:textColor="@color/blackapp"
+            android:fontFamily="@font/open_sans"
+            android:textColorHint="@color/blackapplight"
+
+            android:background="@drawable/edittextshapeinputscreen"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Age"/>
+
+        <EditText
+            android:id="@+id/sex"
+            android:textSize="16sp"
+            android:textColor="@color/blackapp"
+            android:fontFamily="@font/open_sans"
+            android:textColorHint="@color/blackapplight"
+
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/edittextshapeinputscreen"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Sex (0 = female, 1 = male)"/>
+
+        <EditText
+            android:id="@+id/chest_pain_type"
+            android:layout_marginBottom="10dp"
+            android:textSize="16sp"
+            android:textColor="@color/blackapp"
+            android:fontFamily="@font/open_sans"
+            android:textColorHint="@color/blackapplight"
+
+            android:background="@drawable/edittextshapeinputscreen"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Chest Pain Type"/>
+
+        <EditText
+            android:id="@+id/resting_bp"
+            android:layout_marginBottom="10dp"
+            android:textSize="16sp"
+            android:textColor="@color/blackapp"
+            android:fontFamily="@font/open_sans"
+            android:textColorHint="@color/blackapplight"
+
+            android:background="@drawable/edittextshapeinputscreen"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Resting Blood Pressure"/>
+
+        <EditText
+            android:id="@+id/serum_cholesterol"
+            android:layout_marginBottom="10dp"
+            android:textSize="16sp"
+            android:textColor="@color/blackapp"
+            android:fontFamily="@font/open_sans"
+            android:textColorHint="@color/blackapplight"
+
+            android:background="@drawable/edittextshapeinputscreen"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Serum Cholesterol"/>
+
+        <EditText
+            android:id="@+id/fasting_blood_sugar"
+            android:layout_marginBottom="10dp"
+            android:textSize="16sp"
+            android:textColor="@color/blackapp"
+            android:fontFamily="@font/open_sans"
+            android:textColorHint="@color/blackapplight"
+
+            android:background="@drawable/edittextshapeinputscreen"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Fasting Blood Sugar"/>
+
+        <EditText
+            android:id="@+id/resting_ecg"
+            android:layout_marginBottom="10dp"
+            android:textSize="16sp"
+            android:textColor="@color/blackapp"
+            android:fontFamily="@font/open_sans"
+            android:textColorHint="@color/blackapplight"
+
+            android:background="@drawable/edittextshapeinputscreen"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Resting Electrocardiographic Results"/>
+
+        <EditText
+            android:id="@+id/max_heart_rate"
+            android:layout_marginBottom="10dp"
+            android:textSize="16sp"
+            android:textColor="@color/blackapp"
+            android:fontFamily="@font/open_sans"
+            android:textColorHint="@color/blackapplight"
+
+            android:background="@drawable/edittextshapeinputscreen"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Maximum Heart Rate Achieved"/>
+
+        <EditText
+            android:id="@+id/exercise_induced_angina"
+            android:layout_marginBottom="10dp"
+            android:textSize="16sp"
+            android:textColor="@color/blackapp"
+            android:fontFamily="@font/open_sans"
+            android:textColorHint="@color/blackapplight"
+
+            android:background="@drawable/edittextshapeinputscreen"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Exercise Induced Angina"/>
+
+        <EditText
+            android:id="@+id/oldpeak"
+            android:textSize="16sp"
+            android:textColor="@color/blackapp"
+            android:fontFamily="@font/open_sans"
+            android:textColorHint="@color/blackapplight"
+
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/edittextshapeinputscreen"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Oldpeak"/>
+
+        <EditText
+            android:id="@+id/slope"
+            android:textSize="16sp"
+            android:textColor="@color/blackapp"
+            android:fontFamily="@font/open_sans"
+            android:textColorHint="@color/blackapplight"
+
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/edittextshapeinputscreen"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Slope"/>
+
+        <EditText
+            android:id="@+id/num_major_vessels"
+            android:layout_marginBottom="10dp"
+            android:textSize="16sp"
+            android:textColor="@color/blackapp"
+            android:fontFamily="@font/open_sans"
+            android:textColorHint="@color/blackapplight"
+
+            android:background="@drawable/edittextshapeinputscreen"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Number of Major Vessels"/>
+
+        <EditText
+            android:id="@+id/thal"
+            android:textSize="16sp"
+            android:textColor="@color/blackapp"
+            android:fontFamily="@font/open_sans"
+            android:textColorHint="@color/blackapplight"
+
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/edittextshapeinputscreen"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Thal"/>
+
+        <EditText
+            android:id="@+id/target"
+            android:textSize="16sp"
+            android:textColor="@color/blackapp"
+            android:fontFamily="@font/open_sans"
+            android:textColorHint="@color/blackapplight"
+
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/edittextshapeinputscreen"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Target"/>
+
+    </LinearLayout>
+
+    <com.google.android.material.button.MaterialButton
+
+        android:id="@+id/buttonSubmit"
+        android:layout_width="wrap_content"
+        android:layout_height="70dp"
+        android:layout_marginTop="30dp"
+        android:fontFamily="@font/open_sans_semibold"
+        app:elevation="25dp"
+        app:cornerRadius="25dp"
+        app:backgroundTint="#252A34"
+        android:padding="20dp"
+        android:textAllCaps="false"
+        android:paddingStart="34dp"
+        android:paddingEnd="34dp"
+        android:text="Submit"
+        android:layout_marginBottom="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
