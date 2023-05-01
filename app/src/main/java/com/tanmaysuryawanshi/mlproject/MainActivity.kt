@@ -1,14 +1,16 @@
 package com.tanmaysuryawanshi.mlproject
 
 import android.annotation.SuppressLint
-import androidx.appcompat.app.AppCompatActivity
+import android.app.Dialog
+import android.graphics.Color
+import android.graphics.drawable.ColorDrawable
 import android.os.Bundle
-import android.util.Log
 import android.widget.Button
 import android.widget.EditText
 import android.widget.ImageView
-import android.widget.TextView
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
+import com.google.android.material.button.MaterialButton
 import com.tanmaysuryawanshi.mlproject.ml.HeartPredictionModel
 import org.tensorflow.lite.DataType
 import org.tensorflow.lite.support.tensorbuffer.TensorBuffer
@@ -100,9 +102,27 @@ setDatabutton=findViewById(R.id.inputOption)
 
         if(outputFeature0.intArray.get(0)==0){
             Toast.makeText(this,"not heart disease",Toast.LENGTH_SHORT).show()
+
+            val dialog = Dialog(this)
+            //  dialog.getWindow().setWindowAnimations(R.style.Dialog);
+
+            //  dialog.getWindow().setWindowAnimations(R.style.Dialog);
+            dialog.setContentView(R.layout.heart_disease_success)
+            dialog.window!!.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
+            val okBtnNotifiedDialog = dialog.findViewById<MaterialButton>(R.id.okButtonNotifed)
+            dialog.show()
+
+            //  tvNotifiedMessName.setText(m.getMessName());
+            okBtnNotifiedDialog.setOnClickListener {
+                dialog.dismiss()
+
+            }
+
         }
         else{
             Toast.makeText(this," heart disease",Toast.LENGTH_SHORT).show()
+
+
         }
 
         model.close()
@@ -113,20 +133,20 @@ setDatabutton.setOnClickListener{
 
     Toast.makeText(this@MainActivity,"loading ...",Toast.LENGTH_SHORT).show()
 
-//    ageEditText.setText("63")
-// sexEditText.setText("1")
-// cpEditText.setText("3")
-// trestbpsEditText.setText("145")
-// cholEditText.setText("233")
-// fbsEditText.setText("1")
-// restecgEditText.setText("0")
-//    maxheartrateEditText.setText("150")
-// exangEditText.setText("0")
-// oldpeakEditText.setText("2.3")
-// slopeEditText.setText("0")
-// numMajorVesselsEditText.setText("0")
-// thalEditText.setText("1")
-// targetEditText.setText("1")
+    ageEditText.setText("63")
+ sexEditText.setText("1")
+ cpEditText.setText("3")
+ trestbpsEditText.setText("145")
+ cholEditText.setText("233")
+ fbsEditText.setText("1")
+ restecgEditText.setText("0")
+    maxheartrateEditText.setText("150")
+ exangEditText.setText("0")
+ oldpeakEditText.setText("2.3")
+ slopeEditText.setText("0")
+ numMajorVesselsEditText.setText("0")
+ thalEditText.setText("1")
+ targetEditText.setText("1")
 
 }
 
